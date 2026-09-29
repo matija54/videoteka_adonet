@@ -1,0 +1,21 @@
+<Window x:Class="videoteka_adonet.FilmsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Administracija filmova" Height="400" Width="700">
+    <DockPanel Margin="8">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,8">
+            <Button Name="btnAdd" Width="80" Margin="0,0,8,0">Dodaj</Button>
+            <Button Name="btnEdit" Width="80" Margin="0,0,8,0">Uredi</Button>
+            <Button Name="btnDelete" Width="80">Obriši</Button>
+        </StackPanel>
+
+        <DataGrid Name="dgFilms" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="dgFilms_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Šifra" Binding="{Binding Code}" />
+                <DataGridTextColumn Header="Naziv" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Žanr" Binding="{Binding GenreName}" />
+                <DataGridTextColumn Header="Količina" Binding="{Binding Quantity}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>

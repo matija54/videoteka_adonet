@@ -1,0 +1,16 @@
+<Window x:Class="videoteka_adonet.ReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Izvještaji" Height="400" Width="700">
+    <DockPanel Margin="8">
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Top" Margin="0,0,0,8">
+            <TextBlock FontWeight="Bold">Odaberite izvještaj:</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <Button Name="btnStock" Width="140" Margin="0,0,8,0" Click="btnStock_Click">Stanje na skladištu</Button>
+                <Button Name="btnCustomerCard" Width="140" Click="btnCustomerCard_Click">Kartica kupca</Button>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid Name="dgReport" AutoGenerateColumns="True" />
+    </DockPanel>
+</Window>

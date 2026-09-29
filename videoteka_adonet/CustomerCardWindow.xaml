@@ -1,0 +1,18 @@
+<Window x:Class="videoteka_adonet.CustomerCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kartica kupca" Height="500" Width="900">
+    <DockPanel Margin="8">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,8">
+            <TextBlock VerticalAlignment="Center" Margin="0,0,8,0">Kupac:</TextBlock>
+            <ComboBox Name="cbCustomers" DisplayMemberPath="Display" SelectedValuePath="KupacId" Width="300" />
+            <TextBlock VerticalAlignment="Center" Margin="12,0,8,0">Od:</TextBlock>
+            <DatePicker Name="dpFrom" />
+            <TextBlock VerticalAlignment="Center" Margin="8,0,8,0">Do:</TextBlock>
+            <DatePicker Name="dpTo" />
+            <Button Name="btnRun" Width="90" Margin="8,0,0,0" Click="btnRun_Click">Prikaži</Button>
+        </StackPanel>
+
+        <DataGrid Name="dgCard" AutoGenerateColumns="True" />
+    </DockPanel>
+</Window>

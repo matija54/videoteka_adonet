@@ -1,0 +1,21 @@
+<Window x:Class="videoteka_adonet.CustomersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Administracija kupaca" Height="400" Width="700">
+    <DockPanel Margin="8">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0,0,0,8">
+            <Button Name="btnAdd" Width="80" Margin="0,0,8,0" Click="btnAdd_Click">Dodaj</Button>
+            <Button Name="btnEdit" Width="80" Margin="0,0,8,0" Click="btnEdit_Click">Uredi</Button>
+            <Button Name="btnDelete" Width="80" Click="btnDelete_Click">Obriši</Button>
+        </StackPanel>
+
+        <DataGrid Name="dgCustomers" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="dgCustomers_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding KupacId}" />
+                <DataGridTextColumn Header="Ime" Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Prezime" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Članski broj" Binding="{Binding MembershipNumber}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
